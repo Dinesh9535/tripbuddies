@@ -27,9 +27,11 @@ const Register = () => {
       console.log(error);
       if (error.code === 'auth/email-already-in-use') {
         toast.info("You already have an account! please Login");
-      } else {
+      } else  if (error.code === 'auth/weak-password'){
+        toast.error("Password should be at least 6 characters");
+      }   else {
         toast.error(error.message);
-      }   
+      }
     }
   };
 
