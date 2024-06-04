@@ -3,6 +3,7 @@ package com.tripbuddies.user.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.tripbuddies.user.exception.UserNotFoundException;
 import com.tripbuddies.user.model.User;
 import com.tripbuddies.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +27,6 @@ public class UserService {
     }
 
     public User fetchUser(String userId) {
-        return userRepository.findById(userId).get();
+        return userRepository.findById(userId).orElseThrow(() -> new UserNotFoundException(userId));
     }
 }
