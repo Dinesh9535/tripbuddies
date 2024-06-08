@@ -1,8 +1,8 @@
 spring:
   application:
-    name: CHECKOUT-SERVICE
+    name: IDENTITY-SERVICE
   datasource:
-    url: jdbc:postgresql://localhost:5432/trip
+    url: jdbc:postgresql://localhost:5432/user_credentials
     username: postgres
     password: postgres
   jpa:
@@ -20,11 +20,8 @@ spring:
       enabled: true
 
 server:
-  port: 8084
+  port: 8081
 
 logging:
   level:
     web: debug
-stripe:
-  apiKey: "sk_test_51PNGQQP7uV08NbFwLhJ8BEKbTWZlr4HyGzlubHjkeHnXD2iSSgvUwAX4hbz0Tf0CC1eEgjj4fBt6SL4auoL9uCH500WaJEM1FK"
-

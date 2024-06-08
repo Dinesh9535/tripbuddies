@@ -11,10 +11,10 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>com.tripbuddies.checkout</groupId>
-    <artifactId>checkout-service</artifactId>
+    <groupId>com.tripbuddies</groupId>
+    <artifactId>account-service</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <description>Payment CheckOut service</description>
+    <description>Account Management service</description>
     <properties>
         <java.version>17</java.version>
         <mapstruct.version>1.5.3.Final</mapstruct.version>
@@ -57,12 +57,6 @@
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.3.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.stripe/stripe-java -->
-        <dependency>
-            <groupId>com.stripe</groupId>
-            <artifactId>stripe-java</artifactId>
-            <version>25.9.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

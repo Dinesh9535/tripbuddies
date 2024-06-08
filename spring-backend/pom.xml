@@ -16,12 +16,18 @@
     <packaging>pom</packaging>
     <properties>
         <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
+    <modules>
+        <module>account-service</module>
+        <module>checkout-service</module>
+        <module>identity-service</module>
+        <module>trip-service</module>
+        <module>tripbuddies-gateway</module>
+        <module>tripbuddies-service-registry</module>
+    </modules>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>

@@ -1,0 +1,44 @@
+spring:
+ cloud:
+   gateway:
+     routes:
+       - id: identity-service
+         uri: lb://IDENTITY-SERVICE
+         predicates:
+           - Path=/auth/**
+
+       - id: account-service
+         uri: lb://ACCOUNT-SERVICE
+         predicates:
+           - Path=/account-api/**
+         filters:
+           - AuthenticationFilter
+
+       - id: trip-service
+         uri: lb://TRIP-SERVICE
+         predicates:
+           - Path=/trip-api/**
+         filters:
+           - AuthenticationFilter
+
+       - id: checkout-service
+         uri: lb://CHECKOUT-SERVICE
+         predicates:
+           - Path=/checkout-api/**
+         filters:
+           - AuthenticationFilter
+
+ application:
+   name: TRIP-BUDDIES-GATEWAY
+
+   springdoc:
+     api-docs:
+       path: /api-docs
+     swagger-ui:
+       path: /swagger-ui.html
+       enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone : http://localhost:8761/eureka/

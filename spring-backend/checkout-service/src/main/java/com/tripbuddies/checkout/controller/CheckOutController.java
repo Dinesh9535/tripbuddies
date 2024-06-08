@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/checkout")
+@RequestMapping("/checkout-api")
 public class CheckOutController {
 @Value("${stripe.apiKey}")
   String apiKey;
