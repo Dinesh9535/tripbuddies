@@ -26,3 +26,18 @@ logging:
   level:
     web: debug
 
+commercetools:
+  #carts
+  projectKey: travelbuddies
+  #clientId: 29A381gBu4uJY9h2Hbd3m6QR
+  #clientSecret:  sfyf4o89ej3m4l7WfZCkPPs4IUkYOtxZ
+  clientId: H9thsH90d8rJlIdpIwrPZ-no
+  clientSecret:  gu1B-ti-796TaEMApqHvXXpj9zLBnu2m
+  serviceRegion: GCP_AUSTRALIA_SOUTHEAST1
+  oauthUrl: https://auth.australia-southeast1.gcp.commercetools.com
+  apiUrl: https://api.australia-southeast1.gcp.commercetools.com
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
