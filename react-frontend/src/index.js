@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import SearchBar from './components/SearchBar';
 
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route, Navigate, Outlet } from 'react-router-dom';
 import ProtectedLogin from './components/ProtectedLogin';
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
 
       <Route path="/" element={<ProtectedLogin/>}>
         <Route path="/" index element={<Home/>}/>
+        <Route path="search" index element={<SearchBar/>}/>
 
       </Route>
     </Route>
