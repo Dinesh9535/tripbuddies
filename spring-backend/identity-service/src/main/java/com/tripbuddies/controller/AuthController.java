@@ -1,12 +1,9 @@
 package com.tripbuddies.controller;
 
-import com.tripbuddies.dto.AuthRequest;
-import com.tripbuddies.entity.UserCredential;
 import com.tripbuddies.service.AuthService;
+import java.io.IOException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,23 +16,17 @@ public class AuthController {
     private AuthenticationManager authenticationManager;
 
     @PostMapping("/register")
-    public String addNewUser(@RequestBody UserCredential user) {
-        return service.saveUser(user);
+    public String addNewUser(@RequestHeader("Authorization") String token) throws IOException {
+        return service.saveUser(token);
     }
 
     @PostMapping("/token")
-    public String getToken(@RequestBody AuthRequest authRequest) {
-        Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
-        if (authenticate.isAuthenticated()) {
-            return service.generateToken(authRequest.getUsername());
-        } else {
-            throw new RuntimeException("invalid access");
-        }
+    public String getToken(@RequestHeader("Authorization") String token) {
+        return token;
     }
 
     @GetMapping("/validate")
-    public String validateToken(@RequestParam("token") String token) {
-        service.validateToken(token);
-        return "Token is valid";
+    public boolean validateToken(@RequestParam("token") String token) {
+        return service.validateToken(token);
     }
 }
