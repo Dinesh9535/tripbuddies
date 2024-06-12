@@ -8,19 +8,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.CompletableFuture;
 
-import com.commercetools.api.models.cart.Cart;
-import com.commercetools.api.models.product.Product;
+import com.commercetools.api.models.tax_category.TaxCategory;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.tripbuddies.service.CartService;
+import com.tripbuddies.service.TaxCategoryService;
 
 @RestController
-@RequestMapping("/cart")
-public class CartsController {
+@RequestMapping("/taxCategory")
+public class TaxCategoryController {
     @Autowired
-    private CartService cartService;
+    private TaxCategoryService taxCategoryService;
     
-    @PostMapping("/addTripToCart")
-    public CompletableFuture<Cart> addItemToCartAnonymous(@RequestBody Product product) throws JsonProcessingException {
-        return cartService.addTripToCartAnonymous(product);
+    @PostMapping("/createTaxCategory")
+    public CompletableFuture<TaxCategory> addItemToCartAnonymous(@RequestBody TaxCategory taxCategory) throws JsonProcessingException {
+        return taxCategoryService.createTaxCategory(taxCategory);
     }
 }

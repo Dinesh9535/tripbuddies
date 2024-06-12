@@ -11,6 +11,7 @@ import java.util.concurrent.CompletableFuture;
 import com.commercetools.api.models.product.Product;
 import com.commercetools.api.models.product_type.ProductType;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.tripbuddies.dto.ProductDTO;
 import com.tripbuddies.service.ProductService;
 
 @RestController
@@ -20,8 +21,8 @@ public class ProductsController {
     private ProductService productService;
     
     @PostMapping("/addProduct")
-    public CompletableFuture<Product> addProduct(@RequestBody Product product) throws JsonProcessingException {
-        return productService.addProduct(product);
+    public CompletableFuture<Product> addProduct(@RequestBody ProductDTO productDTO) throws JsonProcessingException {
+        return productService.addProduct(productDTO);
     }
 
     @PostMapping("/product-types")
