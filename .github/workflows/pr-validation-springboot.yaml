@@ -10,7 +10,7 @@ on:
 
 jobs:
   pr-validation-springboot:
-    uses: ./pipelines/templates/PR-validation/step-build-services.yaml
+    uses: pipelines/templates/PR-validation/step-build-services.yaml
     with: 
       directory: 'springboot'
 
