@@ -10,7 +10,7 @@ on:
 
 jobs:
   pr-validation-react:
-    uses: ./.github/workflows/templates/PR-validation/step-build-services.yaml
+    uses: ./.github/workflows/job-build-services.yaml
     with: 
       directory: 'react'
 

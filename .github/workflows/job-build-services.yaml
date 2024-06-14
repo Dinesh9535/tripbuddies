@@ -10,7 +10,7 @@ on:
 jobs: 
     validate-springboot: 
         if: inputs.directory == 'springboot'
-        runs: ubuntu-latest
+        runs-on: ubuntu-latest
 
         steps:
         - name: checkout
@@ -29,7 +29,7 @@ jobs:
 
     validate-react: 
         if: inputs.directory == 'react'
-        runs: ubuntu-latest
+        runs-on: ubuntu-latest
 
         steps: 
         - name: checkout
