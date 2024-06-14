@@ -10,7 +10,7 @@ on:
 
 jobs:
   pr-validation-springboot:
-    uses: Dinesh9535/tripbuddies/pipelines/templates/PR-validation/step-build-services.yaml@main
+    uses: ./.github/workflows/templates/PR-validation/step-build-services.yaml
     with: 
       directory: 'springboot'
 
