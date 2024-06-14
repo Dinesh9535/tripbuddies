@@ -1,0 +1,16 @@
+name: PR Validation-SpringBoot 
+
+on: 
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches: 
+    - main
+    paths:
+    - 'react-frontend/**'
+
+jobs:
+  pr-validation-react:
+    uses: ./pipelines/templates/PR-validation/step-build-services.yaml
+    with: 
+      directory: 'react'
+
