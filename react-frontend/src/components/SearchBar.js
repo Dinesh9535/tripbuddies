@@ -29,40 +29,8 @@ const SearchBar = () => (
     <h1>Trips</h1>
     <InstantSearch indexName="trip" searchClient={searchClient}>
       <Stats />
-      {/* <div className="left-panel">
-        <ClearRefinements />
-        <SortBy
-          defaultRefinement="steam-video-games"
-          items={[
-            { value: 'steam-video-games', label: 'Relevant' },
-            {
-              value: 'steam-video-games:recommendationCount:desc',
-              label: 'Most Recommended',
-            },
-            {
-              value: 'steam-video-games:recommendationCount:asc',
-              label: 'Least Recommended',
-            },
-          ]}
-        />
-        <h2>Genres</h2>
-        <RefinementList attribute="genres" />
-        <h2>Players</h2>
-        <RefinementList attribute="players" />
-        <h2>Platforms</h2>
-        <RefinementList attribute="platforms" />
-        <h2>Misc</h2>
-        <RefinementList attribute="misc" />
-        <Configure
-          hitsPerPage={6}
-          attributesToSnippet={['description:50']}
-          snippetEllipsisText={'...'}
-        />
-      </div>
-      <div className="right-panel"> */}
         <SearchBox />
         <InfiniteHits hitComponent={Hit} />
-      {/* </div> */}
     </InstantSearch>
   </div>
 )
@@ -71,13 +39,14 @@ const Hit = ({ hit }) => {
   return (
     <div key={hit.id}>
       <div className="hit-name">
-        <Highlight attribute="title" hit={hit} />
+        {/* <Snippet attribute="title" hit={hit} /> */}
+        <h1>{hit.title}</h1>
       </div>
       {/* <div className="hit-name">
         <Snippet attribute="description[0]" hit={hit} />
       </div> */}
       <p>{hit.description[2].children[0].text}</p>
-      <img src={hit.tripimage[0].url} align="left" alt={hit.name} />
+      <img src={"http://localhost:1337"+hit.tripimage[0].url} align="left" alt={hit.name} />
 
       {/* <div className="hit-description">
         {hit.description && hit.description.length > 0 ? (
