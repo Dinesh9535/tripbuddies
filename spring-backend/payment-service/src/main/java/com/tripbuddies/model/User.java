@@ -1,4 +1,4 @@
-package com.tripbuddies.checkout.model;
+package com.tripbuddies.model;
 
 import lombok.Data;
 

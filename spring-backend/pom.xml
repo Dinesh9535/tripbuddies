@@ -21,7 +21,7 @@
     </properties>
     <modules>
         <module>account-service</module>
-        <module>checkout-service</module>
+        <module>payment-service</module>
         <module>identity-service</module>
         <module>trip-service</module>
         <module>tripbuddies-gateway</module>

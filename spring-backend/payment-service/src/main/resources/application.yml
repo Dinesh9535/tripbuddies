@@ -19,6 +19,15 @@ spring:
       path: /swagger-ui.html
       enabled: true
 
+commercetools:
+  project: travelbuddies
+  client_id: BhYFcKb_QtlaBFFMybkTvX6o
+  client_secret: rnG3Cz-49gi_5m7utM9_L2J89vQKe_gK
+  oauth_url: https://auth.australia-southeast1.gcp.commercetools.com
+  api_url: https://api.australia-southeast1.gcp.commercetools.com
+  scope: view_api_clients:travelbuddies manage_payments:travelbuddies view_orders:travelbuddies manage_project:travelbuddies manage_api_clients:travelbuddies
+
+
 server:
   port: 8084
 
