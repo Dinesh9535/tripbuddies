@@ -24,6 +24,7 @@
         <module>payment-service</module>
         <module>identity-service</module>
         <module>trip-service</module>
+        <module>stripe-service</module>
         <module>tripbuddies-gateway</module>
         <module>tripbuddies-service-registry</module>
     </modules>
