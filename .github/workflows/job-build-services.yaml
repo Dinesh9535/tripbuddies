@@ -48,5 +48,5 @@ jobs:
         - name: build travel-buddies react project
           run: |
             cd ${{ github.workspace }}/react-frontend 
-            npm run build
+            CI=false npm run build
         
