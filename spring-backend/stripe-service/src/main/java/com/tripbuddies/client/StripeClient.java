@@ -16,7 +16,7 @@ import jakarta.annotation.PostConstruct;
 @Component
 public class StripeClient {
 
-    @Value("${stripe.api.key}")
+    @Value("${stripe.apiKey}")
     private String stripeApiKey;
 
     @PostConstruct
