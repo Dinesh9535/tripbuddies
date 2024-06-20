@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
 @EnableDiscoveryClient
 @ConfigurationPropertiesScan
-@RestController
 public class StripeServiceApplication {
 
     public static void main(String[] args) {

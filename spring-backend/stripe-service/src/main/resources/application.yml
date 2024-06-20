@@ -43,4 +43,4 @@ management:
         include: "*"
 
 stripe:
-  apiKey:  ${STRIPE_SECRET_KEY:sk_test_51PNGQQP7uV08NbFwLhJ8BEKbTWZlr4HyGzlubHjkeHnXD2iSSgvUwAX4hbz0Tf0CC1eEgjj4fBt6SL4auoL9uCH500WaJEM1FK}
+  apiKey:  ${STRIPE_SECRET_KEY:sk_test_51PTgcjBE6NiX0AaVHtjkYBqNF4vA4FcpXvtDBHMMsdT7SGJTsIHL0vfrJfdTBIZKCYktINQCDFJqofQpi0YeywZI00Onf262wh}
