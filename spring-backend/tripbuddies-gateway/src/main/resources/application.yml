@@ -28,13 +28,6 @@ spring:
          filters:
            - AuthenticationFilter
 
-       - id: stripe-service
-         uri: lb://STRIPE-SERVICE
-         predicates:
-           - Path=/stripe-api/**
-         filters:
-           - AuthenticationFilter
-
  application:
    name: TRIP-BUDDIES-GATEWAY
 
