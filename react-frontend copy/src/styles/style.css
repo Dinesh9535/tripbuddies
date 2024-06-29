@@ -1,0 +1,5 @@
+@import "../../public/css/style.css";
+.error {
+    color: red;
+    font-size: 0.875em;
+}

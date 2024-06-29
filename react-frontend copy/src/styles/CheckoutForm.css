@@ -1,0 +1,38 @@
+/* CheckoutForm.css */
+.checkout-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.checkout-form h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.checkout-form .error {
+    color: red;
+    margin-top: 1em;
+}
+
+.checkout-form .success {
+    color: green;
+    margin-top: 1em;
+}
+
+.checkout-form button {
+    width: 100%;
+    padding: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.checkout-form button:disabled {
+    background-color: #ccc;
+}
