@@ -1,0 +1,56 @@
+{
+	"name": "@voucherify/sdk",
+	"version": "2.7.2",
+	"description": "Official Voucherify JS SDK",
+	"author": "Voucherify",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/voucherifyio/voucherify-js-sdk.git",
+		"directory": "packages/sdk"
+	},
+	"bugs": {
+		"url": "https://github.com/voucherifyio/voucherify-js-sdk/issues",
+		"email": "support@voucherify.io"
+	},
+	"keywords": [
+		"Voucherify"
+	],
+	"sideEffects": false,
+	"main": "dist/voucherifysdk.umd.production.min.js",
+	"module": "dist/voucherifysdk.esm.js",
+	"typings": "dist/index.d.ts",
+	"files": [
+		"README.md",
+		"dist"
+	],
+	"scripts": {
+		"start": "tsdx watch --tsconfig tsconfig.build.json --verbose --noClean --target node --name VoucherifySDK --format esm,umd",
+		"build": "tsdx build --tsconfig tsconfig.build.json --target node --name VoucherifySDK --format esm,umd",
+		"test": "tsdx test",
+		"lint": "yarn lint:ts && yarn lint:eslint",
+		"lint:ts": "tsc --noEmit -p ./tsconfig.build.json",
+		"lint:eslint": "eslint './src/**/*.{ts,tsx,js,d.ts}'",
+		"lint:eslint:fix": "eslint './src/**/*.{ts,tsx,js,d.ts}' --fix",
+		"docs": "typedoc",
+		"prepublish": "yarn build"
+	},
+	"dependencies": {
+		"form-data": "4.0.0",
+		"axios": "1.6.5",
+		"qs": "6.9.7"
+	},
+	"devDependencies": {
+		"dotenv": "16.3.1",
+		"csv-stringify": "6.4.0",
+		"@types/qs": "6.9.7"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"browser": {
+		"fs": false,
+		"os": false,
+		"path": false
+	}
+}
