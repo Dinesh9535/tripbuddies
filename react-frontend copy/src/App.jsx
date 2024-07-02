@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./styles/style.css";
 import Aos from "aos";
 import HomePage1 from "./pages/homes/home";
-import { useEffect } from "react";
+import {useEffect, useState} from "react";
 import HomePage4 from "./pages/homes/home";
 import ScrollTopBehaviour from "./components/common/ScrollTopBehavier";
 import ScrollToTop from "./components/common/ScrollToTop";
@@ -20,6 +20,10 @@ import RegisterPage from "./pages/pages/register";
 import NotFoundPage from "./pages/pages/404";
 import SuccessFulPage from "./components/pages/Succesful.jsx";
 import FailurePage from "./components/pages/Failure.jsx";
+import PersonalDetails from './components/pages/PersonalDetails.jsx';
+import Payment from './components/pages/Payment.jsx';
+import Confirmation from './components/pages/Confirmation';
+import Successful from "./components/pages/Succesful.jsx";
 
 
 function App() {
@@ -29,7 +33,7 @@ function App() {
       once: true,
     });
   }, []);
-
+  const [bookingDetails, setBookingDetails] = useState({});
   return (
     <>
       <BrowserRouter>
@@ -52,6 +56,10 @@ function App() {
             <Route path="/*" element={<NotFoundPage />} />
             <Route path="/*" element={<SuccessFulPage />} />
             <Route path="/*" element={<FailurePage />} />
+            <Route path="/personal-details" element={<PersonalDetails/> }/>
+            <Route path="/confirmation" element={<Confirmation/> }/>
+            <Route path="/payment" element={<Payment />}/>
+            <Route path="/success" element={<Successful />}/>
           </Route>
         </Routes>
         <ScrollTopBehaviour />

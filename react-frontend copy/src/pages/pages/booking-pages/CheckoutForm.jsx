@@ -38,7 +38,7 @@ const CheckoutForm = () => {
             if (response.data.success) {
                 setSucceeded(true);
             } else {
-                setError('Payment failed');
+                setError('Payment_old failed');
             }
         } catch (error) {
             setError(error.response ? error.response.data.message : error.message);

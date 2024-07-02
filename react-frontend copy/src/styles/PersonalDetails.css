@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.booking-page, .payment-page, .confirmation-page {
+    padding: 20px;
+}
+
+.booking-form, .payment-page div, .confirmation-page div {
+    margin-bottom: 10px;
+}
+
+.booking-form label, .payment-page p, .confirmation-page p {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.booking-form input, .booking-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.booking-form button, .payment-page button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.booking-form button:hover, .payment-page button:hover {
+    background-color: #218838;
+}
